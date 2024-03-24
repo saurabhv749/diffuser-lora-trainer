@@ -1191,6 +1191,8 @@ def main(args):
                     revision=args.revision,
                     variant=args.variant,
                     torch_dtype=weight_dtype,
+                    requires_safety_checker = False,
+                    safety_checker = None
                 )
 
                 pipeline = pipeline.to(accelerator.device)
@@ -1264,6 +1266,8 @@ def main(args):
             revision=args.revision,
             variant=args.variant,
             torch_dtype=weight_dtype,
+            requires_safety_checker = False,
+            safety_checker = None
         )
         pipeline = pipeline.to(accelerator.device)
 
