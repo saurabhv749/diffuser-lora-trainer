@@ -1298,6 +1298,7 @@ def main(args):
                     )
 
         if args.push_to_hub:
+            images = []
             save_model_card(
                 repo_id,
                 images=images,
